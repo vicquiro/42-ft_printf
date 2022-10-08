@@ -6,11 +6,11 @@
 /*   By: vquiroga <vquiroga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 19:48:50 by vquiroga          #+#    #+#             */
-/*   Updated: 2022/10/08 20:18:10 by vquiroga         ###   ########.fr       */
+/*   Updated: 2022/10/08 20:29:18 by vquiroga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include  "../includes/libft_printf.h"
+#include  "../includes/ft_printf.h"
 
 int	ft_print_char(int c)
 {
@@ -25,7 +25,7 @@ void	ft_putstr(char *s)
 	i = 0;
 	while (s[i])
 	{
-		ft_putchar(s[i]);
+		ft_print_char(s[i]);
 		i++;
 	}
 }
@@ -44,7 +44,7 @@ int	ft_print_str(char *s)
 		i = 0;
 		while (s[i])
 		{
-			ft_putchar(s[i]);
+			ft_print_char(s[i]);
 			i++;
 		}
 	}

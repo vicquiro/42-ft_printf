@@ -6,11 +6,11 @@
 /*   By: vquiroga <vquiroga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 12:47:58 by vquiroga          #+#    #+#             */
-/*   Updated: 2022/10/08 20:17:47 by vquiroga         ###   ########.fr       */
+/*   Updated: 2022/10/08 20:39:59 by vquiroga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include  "../includes/libft_printf.h"
+#include  "../includes/ft_printf.h"
 
 int	ft_select_format(va_list args, const char flag)
 {
@@ -35,7 +35,7 @@ int	ft_select_format(va_list args, const char flag)
 		return (ft_putnbr_unsig(va_arg(args, unsigned int), 0));
 	else if (flag == '%')
 		return (ft_print_char('%'));
-	return (0);
+	return (1);
 }
 
 int	ft_printf(char const *str, ...)
@@ -45,21 +45,22 @@ int	ft_printf(char const *str, ...)
 	int		print_length;
 
 	i = 0;
+	print_length = 0;
 	va_start(args, str);
 	while (str[i])
 	{
-		if (str[i] == '%' && good_flag(str[i + 1], "csdi%xXpu") == -1)
-		{
-			va_end(args);
-			return (print_length);
-		}
-		else if (str[i] == '%')
+		// if (str[i] == '%' && good_flag(str[i + 1], "csdi%xXpu") == -1)
+		// {
+		// 	va_end(args);
+		// 	return (print_length);
+		// }
+		if (str[i] == '%')
 		{
 			print_length += ft_select_format(args, str[i + 1]);
 			i++;
 		}
 		else
-			print_length += ft_printchar(str[i]);
+			print_length += ft_print_char(str[i]);
 		i++;
 	}
 	va_end(args);

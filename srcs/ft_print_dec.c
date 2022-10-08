@@ -6,11 +6,11 @@
 /*   By: vquiroga <vquiroga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 19:47:26 by vquiroga          #+#    #+#             */
-/*   Updated: 2022/10/08 20:17:11 by vquiroga         ###   ########.fr       */
+/*   Updated: 2022/10/08 20:29:06 by vquiroga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include  "../includes/libft_printf.h"
+#include  "../includes/ft_printf.h"
 
 int	ft_putnbr(int number, int counter)
 {

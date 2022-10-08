@@ -6,11 +6,11 @@
 /*   By: vquiroga <vquiroga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 19:48:05 by vquiroga          #+#    #+#             */
-/*   Updated: 2022/10/08 20:18:12 by vquiroga         ###   ########.fr       */
+/*   Updated: 2022/10/08 20:33:09 by vquiroga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include  "../includes/libft_printf.h"
+#include  "../includes/ft_printf.h"
 
 int	ft_putnbr_unsig(unsigned int number, int counter)
 {

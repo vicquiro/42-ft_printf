@@ -6,11 +6,11 @@
 /*   By: vquiroga <vquiroga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 15:33:17 by vquiroga          #+#    #+#             */
-/*   Updated: 2022/10/08 20:18:09 by vquiroga         ###   ########.fr       */
+/*   Updated: 2022/10/08 20:29:13 by vquiroga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include  "../includes/libft_printf.h"
+#include  "../includes/ft_printf.h"
 
 int	ft_putnbr_hexa(long nbr, int counter, char *base)
 {
