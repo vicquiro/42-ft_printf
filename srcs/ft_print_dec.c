@@ -6,7 +6,7 @@
 /*   By: vquiroga <vquiroga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 19:47:26 by vquiroga          #+#    #+#             */
-/*   Updated: 2022/10/08 20:29:06 by vquiroga         ###   ########.fr       */
+/*   Updated: 2022/10/13 16:42:33 by vquiroga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_putnbr(int number, int counter)
 	}
 	if (nbr >= 10)
 	{
-		counter += ft_putnbr((nbr / 10), counter);
+		counter += ft_putnbr((nbr / 10), 0);
 		counter += ft_print_char((nbr % 10) + '0');
 	}
 	else

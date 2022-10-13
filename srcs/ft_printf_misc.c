@@ -6,7 +6,7 @@
 /*   By: vquiroga <vquiroga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 19:48:50 by vquiroga          #+#    #+#             */
-/*   Updated: 2022/10/08 20:29:18 by vquiroga         ###   ########.fr       */
+/*   Updated: 2022/10/13 17:13:26 by vquiroga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int	good_flag(char const chr, char *set)
 	while (set[i])
 	{	
 		if (chr == set[i])
-			return (-1);
+			return (1);
 		i++;
 	}
 	return (0);

@@ -6,11 +6,12 @@
 /*   By: vquiroga <vquiroga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 12:47:58 by vquiroga          #+#    #+#             */
-/*   Updated: 2022/10/08 20:39:59 by vquiroga         ###   ########.fr       */
+/*   Updated: 2022/10/13 18:35:41 by vquiroga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include  "../includes/ft_printf.h"
+#include <limits.h>
 
 int	ft_select_format(va_list args, const char flag)
 {
@@ -23,14 +24,16 @@ int	ft_select_format(va_list args, const char flag)
 	else if (flag == 'i')
 		return (ft_putnbr(va_arg(args, int), 0));
 	else if (flag == 'x')
-		return (ft_putnbr_hexa(va_arg(args, long), \
+		return (ft_putnbr_hexa(va_arg(args, unsigned int), \
 		0, "0123456789abcdef"));
 	else if (flag == 'X')
-		return (ft_putnbr_hexa(va_arg(args, long), \
+		return (ft_putnbr_hexa(va_arg(args, unsigned int), \
 		0, "0123456789ABCDEF"));
 	else if (flag == 'p')
-		return (ft_putnbr_pointer(va_arg(args, unsigned long long), \
-		0,  "0123456789ABCDEF"));
+	{
+		return (ft_putnbr_pointer(va_arg(args, size_t), \
+		ft_print_str("0x"), "0123456789abcdef"));
+	}
 	else if (flag == 'u')
 		return (ft_putnbr_unsig(va_arg(args, unsigned int), 0));
 	else if (flag == '%')
@@ -66,3 +69,14 @@ int	ft_printf(char const *str, ...)
 	va_end(args);
 	return (print_length);
 }
+
+// int main(void)
+// {
+// 	int n1;
+// 	int n2;
+
+// 	n1 = printf(" %x \n", LONG_MAX);
+// 	n2 = ft_printf(" %x \n", LONG_MAX);
+
+// 	printf("%d\n%d\n",n1,n2);
+// }

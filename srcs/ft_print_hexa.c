@@ -6,21 +6,32 @@
 /*   By: vquiroga <vquiroga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 15:33:17 by vquiroga          #+#    #+#             */
-/*   Updated: 2022/10/08 20:29:13 by vquiroga         ###   ########.fr       */
+/*   Updated: 2022/10/13 18:35:56 by vquiroga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include  "../includes/ft_printf.h"
 
-int	ft_putnbr_hexa(long nbr, int counter, char *base)
+int	ft_putnbr_hexa(unsigned int nbr, int counter, char *base)
 {
-	if (nbr < 0)
-	{
-		nbr = nbr * (-1);
-		counter += ft_print_char('-');
-	}
-	if (nbr > 15)
-		counter += ft_putnbr_hexa((nbr / 16), counter, base);
-	counter += ft_print_char(base[nbr % 16]);
+	unsigned long long	k;
+
+	k = (unsigned long long) nbr;
+	if (k > 15)
+		counter += ft_putnbr_hexa((k / 16), 0, base);
+	counter += ft_print_char(base[k % 16]);
 	return (counter);
 }
+
+// int	ft_putnbr_p(size_t nbr, int counter, char *base)
+// {
+// 	if (nbr < 0)
+// 	{
+// 		nbr = nbr * (-1);
+// 		counter += ft_print_char('-');
+// 	}
+// 	if (nbr > 16)
+// 		counter += ft_putnbr_hexa((nbr / 16), 0, base);
+// 	counter += ft_print_char(base[nbr % 16]);
+// 	return (counter);
+// }
