@@ -12,15 +12,14 @@
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
-# include <stdio.h>
 # include <unistd.h>
 # include <stdarg.h>
+# include <limits.h>
 
 void	ft_putstr(char *s);
 int		ft_isprint(int c);
 int		ft_print_str(char *s);
 int		ft_print_char(int c);
-int		good_flag(char const chr, char *set);
 int		ft_select_format(va_list args, const char flag);
 int		ft_printf(char const *str, ...);
 int		ft_putnbr(int number, int counter);

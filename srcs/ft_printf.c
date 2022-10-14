@@ -52,11 +52,6 @@ int	ft_printf(char const *str, ...)
 	va_start(args, str);
 	while (str[i])
 	{
-		// if (str[i] == '%' && good_flag(str[i + 1], "csdi%xXpu") == -1)
-		// {
-		// 	va_end(args);
-		// 	return (print_length);
-		// }
 		if (str[i] == '%')
 		{
 			print_length += ft_select_format(args, str[i + 1]);
@@ -69,14 +64,3 @@ int	ft_printf(char const *str, ...)
 	va_end(args);
 	return (print_length);
 }
-
-// int main(void)
-// {
-// 	int n1;
-// 	int n2;
-
-// 	n1 = printf(" %x \n", LONG_MAX);
-// 	n2 = ft_printf(" %x \n", LONG_MAX);
-
-// 	printf("%d\n%d\n",n1,n2);
-// }
