@@ -12,9 +12,9 @@
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
-# include <stdio.h>
 # include <unistd.h>
 # include <stdarg.h>
+# include <limits.h>
 
 void	ft_putstr(char *s);
 int		ft_print_str(char *s);

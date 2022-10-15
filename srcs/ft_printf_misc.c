@@ -50,17 +50,3 @@ int	ft_print_str(char *s)
 	}
 	return (i);
 }
-
-int	good_flag(char const chr, char *set)
-{
-	int	i;
-
-	i = 0;
-	while (set[i])
-	{	
-		if (chr == set[i])
-			return (1);
-		i++;
-	}
-	return (0);
-}

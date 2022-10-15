@@ -63,6 +63,7 @@ int	ft_printf(char const *str, ...)
 	va_end(args);
 	return (print_length);
 }
+<<<<<<< HEAD
 
 // int main()
 // {
@@ -71,3 +72,5 @@ int	ft_printf(char const *str, ...)
 // 	printf("-- %d --\n", printf("%%S26z2i7wQ%0.0u%s", 651212353, NULL));
 //   return (0);
 // }
+=======
+>>>>>>> 6de886abdc19714fb3007021b73a93343641c044
