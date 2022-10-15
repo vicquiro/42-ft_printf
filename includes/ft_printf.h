@@ -6,7 +6,7 @@
 /*   By: vquiroga <vquiroga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 19:30:17 by vquiroga          #+#    #+#             */
-/*   Updated: 2022/10/13 18:35:48 by vquiroga         ###   ########.fr       */
+/*   Updated: 2022/10/15 15:06:33 by vquiroga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,8 @@
 # include <stdarg.h>
 
 void	ft_putstr(char *s);
-int		ft_isprint(int c);
 int		ft_print_str(char *s);
 int		ft_print_char(int c);
-int		good_flag(char const chr, char *set);
 int		ft_select_format(va_list args, const char flag);
 int		ft_printf(char const *str, ...);
 int		ft_putnbr(int number, int counter);

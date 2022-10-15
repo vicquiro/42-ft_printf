@@ -6,12 +6,11 @@
 /*   By: vquiroga <vquiroga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 12:47:58 by vquiroga          #+#    #+#             */
-/*   Updated: 2022/10/13 18:35:41 by vquiroga         ###   ########.fr       */
+/*   Updated: 2022/10/15 15:19:28 by vquiroga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include  "../includes/ft_printf.h"
-#include <limits.h>
 
 int	ft_select_format(va_list args, const char flag)
 {
@@ -52,11 +51,6 @@ int	ft_printf(char const *str, ...)
 	va_start(args, str);
 	while (str[i])
 	{
-		// if (str[i] == '%' && good_flag(str[i + 1], "csdi%xXpu") == -1)
-		// {
-		// 	va_end(args);
-		// 	return (print_length);
-		// }
 		if (str[i] == '%')
 		{
 			print_length += ft_select_format(args, str[i + 1]);
@@ -70,13 +64,10 @@ int	ft_printf(char const *str, ...)
 	return (print_length);
 }
 
-// int main(void)
+// int main()
 // {
-// 	int n1;
-// 	int n2;
-
-// 	n1 = printf(" %x \n", LONG_MAX);
-// 	n2 = ft_printf(" %x \n", LONG_MAX);
-
-// 	printf("%d\n%d\n",n1,n2);
+// 	ft_printf("-- %d --\n", ft_printf("%%S26z2i7wQ%u%s", 651212353, NULL));
+// 	printf("--------------------\n");
+// 	printf("-- %d --\n", printf("%%S26z2i7wQ%0.0u%s", 651212353, NULL));
+//   return (0);
 // }
