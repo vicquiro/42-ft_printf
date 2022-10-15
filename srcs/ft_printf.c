@@ -6,7 +6,7 @@
 /*   By: vquiroga <vquiroga@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 12:47:58 by vquiroga          #+#    #+#             */
-/*   Updated: 2022/10/15 15:19:28 by vquiroga         ###   ########.fr       */
+/*   Updated: 2022/10/15 15:36:51 by vquiroga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_select_format(va_list args, const char flag)
 		0, "0123456789ABCDEF"));
 	else if (flag == 'p')
 	{
-		return (ft_putnbr_pointer(va_arg(args, size_t), \
+		return (ft_put_pointer(va_arg(args, size_t), \
 		ft_print_str("0x"), "0123456789abcdef"));
 	}
 	else if (flag == 'u')
@@ -63,7 +63,6 @@ int	ft_printf(char const *str, ...)
 	va_end(args);
 	return (print_length);
 }
-<<<<<<< HEAD
 
 // int main()
 // {
@@ -72,5 +71,3 @@ int	ft_printf(char const *str, ...)
 // 	printf("-- %d --\n", printf("%%S26z2i7wQ%0.0u%s", 651212353, NULL));
 //   return (0);
 // }
-=======
->>>>>>> 6de886abdc19714fb3007021b73a93343641c044
