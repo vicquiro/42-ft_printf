@@ -3,7 +3,7 @@
 
 ## Requirements
 
-The functions are written in __C language__ and need the `gcc` compiler, with `<stdlib.h>`, `<stdarg.h>` and `<unistd.h>` standard libraries to run.
+The functions are written in __C language__ and need the `gcc` compiler, with `<unistd.h>`, `<stdlib.h>` and `<stdarg.h>` standard libraries to run.
 
 ## Instructions
 
