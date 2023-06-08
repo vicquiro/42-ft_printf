@@ -7,7 +7,7 @@ The functions are written in __C language__ and need the `gcc` compiler, with `<
 **Compiling the library**
 
 ```shell
-$ make
+$ cd 42-ft_printf/ && make
 ```
 
 **Using it in your code**
